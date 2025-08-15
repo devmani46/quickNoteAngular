@@ -1,0 +1,48 @@
+<main id="notesContainer" class="notes-grid"></main>
+
+<div id="noteDialog" class="note-dialog">
+  <div class="dialog-content">
+    <div class="dialog-header">
+      <h2 class="dialog-title" id="dialogTitle">
+        Type your frustrations out..
+      </h2>
+
+    </div>
+
+<form [formGroup]="noteForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="noteTitle" class="form-label">Title</label>
+        <input
+          type="text"
+          id="noteTitle"
+          class="form-input"
+          placeholder="Enter note title..."
+          required
+          formControlName="noteTitle"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="noteContent" class="form-label">Content</label>
+        <textarea
+          id="noteContent"
+          class="form-textarea"
+          placeholder="Write your note here..."
+          required
+          formControlName="noteDesc"
+        ></textarea>
+      </div>
+
+      <div class="dialog-actions">
+        <button
+          type="button"
+          class="cancel-btn"
+          routerLink="/"
+        >
+          Cancel
+        </button>
+        <button type="submit" class="save-btn">Save Note</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="main-container">
+
+    <div class="search-filter-bar">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search notes..."
+        />
+      </div>
+
+      <select
+        id="filterSelect"
+        class="filter-dropdown"
+        onchange="filterNotes()"
+      >
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+      <button class="add-note-btn" routerLink="NoteDetails" >
+        + Add Note
+      </button>
+    </div>
+
+
+    <div class="notes-list" style="padding-left: 3rem;">
+        <app-note-card></app-note-card>
+    </div>
+</div>

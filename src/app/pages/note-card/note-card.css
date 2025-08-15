@@ -1,0 +1,78 @@
+body {
+    background-color: #e63946; 
+}
+
+.note-card-container {
+    background-color: #f5f5dc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    margin: 16px;
+    display: inline-block;
+    width: 300px;
+    position: relative;
+}
+
+.note-card-container:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.note-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.note-card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.note-card-actions {
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+
+.note-card-container:hover .note-card-actions {
+    opacity: 1;
+
+}
+
+
+.edit-note-btn, .delete-note-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.edit-note-btn:hover, .delete-note-btn:hover {
+
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    background-color: #e63946;
+}
+
+
+.note-card-body {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+
+.note-card-footer {
+    color: #000;
+    font-size: 0.8em;
+    margin-top: 8px;
+}
