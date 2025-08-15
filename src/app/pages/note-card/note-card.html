@@ -1,15 +1,15 @@
-<div *ngFor="let note of notes; let i = index" class="note-card-container">
-    <div class="note-card-header">
-        <div class="note-card-title">{{ note.title }}</div>
-        <div class="note-card-actions">
-            <button class="edit-note-btn">👀</button>
-            <button class="delete-note-btn" (click)="deleteNote(i)">❌</button>
-        </div>
+<div *ngFor="let note of filteredNotes; let i = index" class="note-card-container">
+  <div class="note-card-header">
+    <div class="note-card-title">{{ note.title }}</div>
+    <div class="note-card-actions">
+      <button class="edit-note-btn">👀</button>
+      <button class="delete-note-btn" (click)="deleteNote(i)">❌</button>
     </div>
-    <div class="note-card-body">
-        {{ note.description }}
-    </div>
-    <div class="note-card-footer">
-        {{ note.createdAt | date:'yyyy/MM/dd HH:mm:ss' }}
-    </div>
+  </div>
+  <div class="note-card-body">
+    {{ note.description }}
+  </div>
+  <div class="note-card-footer">
+    {{ note.createdAt | date:'yyyy/MM/dd HH:mm:ss' }}
+  </div>
 </div>
