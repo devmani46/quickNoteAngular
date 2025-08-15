@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './note-card.css'
 })
 export class NoteCard implements OnInit {
-
   notes: any[] = [];
 
   ngOnInit() {

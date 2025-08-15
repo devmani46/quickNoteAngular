@@ -10,5 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './note-list.css'
 })
 export class NoteList {
+searchText: any;
 
 }
