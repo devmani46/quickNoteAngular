@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { NoteCard } from "../note-card/note-card";
 import { RouterLink } from '@angular/router';
@@ -12,9 +13,5 @@ import { FormsModule } from '@angular/forms';
 })
 export class NoteList {
   searchText: string = '';
-
-  filterNotes(event: Event) {
-    const value = (event.target as HTMLSelectElement).value;
-    console.log("Filter selected:", value);
-  }
+  sortOrder: string = 'newest';  // default
 }

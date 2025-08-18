@@ -1,3 +1,4 @@
+
 <div class="main-container">
 
   <div class="search-filter-bar">
@@ -14,17 +15,18 @@
     <select
       id="filterSelect"
       class="filter-dropdown"
-      (change)="filterNotes($event)"
+      [(ngModel)]="sortOrder"
     >
       <option value="newest">Newest First</option>
       <option value="oldest">Oldest First</option>
     </select>
+
     <button class="add-note-btn" routerLink="NoteDetails">
       + Add Note
     </button>
   </div>
 
   <div class="notes-list" style="padding-left: 3rem;">
-    <app-note-card [searchText]="searchText"></app-note-card>
+    <app-note-card [searchText]="searchText" [sortOrder]="sortOrder"></app-note-card>
   </div>
 </div>

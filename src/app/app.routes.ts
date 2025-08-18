@@ -8,3 +8,4 @@ export const routes: Routes = [
   { path : '',component: Mainlayout  },
     { path : 'NoteDetails',component: NoteDetails  },
 ];
+
