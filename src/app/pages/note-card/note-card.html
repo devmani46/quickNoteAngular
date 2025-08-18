@@ -1,4 +1,4 @@
-<div *ngFor="let note of filteredNotes; let i = index" class="note-card-container">
+<!-- <div *ngFor="let note of filteredNotes; let i = index" class="note-card-container">
   <div class="note-card-header">
     <div class="note-card-title">{{ note.title }}</div>
     <div class="note-card-actions">
@@ -11,5 +11,35 @@
   </div>
   <div class="note-card-footer">
     {{ note.createdAt | date:'MMM d, y HH:mm:ss' }}
+  </div>
+</div> -->
+<div *ngFor="let note of filteredNotes; let i = index" class="note-card-container">
+  <div class="note-card-header">
+    <div class="note-card-title">{{ note.title }}</div>
+    <div class="note-card-actions">
+      <button class="edit-note-btn" (click)="openEditModal(i)">👀</button>
+      <button class="delete-note-btn" (click)="deleteNote(i)">❌</button>
+    </div>
+  </div>
+  <div class="note-card-body">
+    {{ note.description }}
+  </div>
+  <div class="note-card-footer">
+    {{ note.createdAt | date:'MMM d, y HH:mm:ss' }}
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" *ngIf="isEditModalOpen">
+  <div class="modal-content">
+    <h3>Edit Note</h3>
+    <label>Title</label>
+    <input type="text" [(ngModel)]="editNote.title" />
+    <label>Description</label>
+    <textarea [(ngModel)]="editNote.description"></textarea>
+    <div class="modal-actions">
+      <button (click)="updateNote()">Update</button>
+      <button (click)="closeEditModal()">Cancel</button>
+    </div>
   </div>
 </div>
